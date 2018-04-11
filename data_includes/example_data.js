@@ -18,7 +18,7 @@ var items = [
     ["critical", "Message", {html: "<p>Daniela in the audience says, “People didn’t stop " + 
                       "looking at their phone on the slide about the history of the justice " + 
                       "system.”</p>", q: "Given what your friend told you, do you think that it " +
-                      "is possible people were paying attention before the jail slide?"}],
+                      "is possible people were paying attention before the jail slide?"}]
 ];
 /*
 
