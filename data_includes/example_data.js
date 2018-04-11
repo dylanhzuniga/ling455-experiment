@@ -1,39 +1,30 @@
-var shuffleSequence = seq("intro", sepWith("sep", seq("practice", rshuffle("s1", "s2"))), sepWith("sep", rshuffle("q1", "q2")));
+var shuffleSequence = seq("intro");
 var practiceItemTypes = ["practice"];
 
 var defaults = [
-    "Separator", {
-        transfer: 1000,
-        normalMessage: "Please wait for the next sentence.",
-        errorMessage: "Wrong. Please wait for the next sentence."
-    },
-    "DashedSentence", {
-        mode: "self-paced reading"
-    },
-    "AcceptabilityJudgment", {
-        as: ["1", "2", "3", "4", "5", "6", "7"],
-        presentAsScale: true,
-        instructions: "Use number keys or click boxes to answer.",
-        leftComment: "(Bad)", rightComment: "(Good)"
-    },
     "Question", {
-        hasCorrect: true
+        as: ["Yes", "No"]
     },
     "Message", {
-        hideProgressBar: true
-    },
-    "Form", {
-        hideProgressBar: true,
-        continueOnReturn: true,
-        saveReactionTime: true
+        transfer: "keypress"
     }
 ];
 
 var items = [
+    ["intro", "Message", {html: "<p>Imagine you gave a speech at a small political rally " +
+              "with a presentation about incarceration. There were people in the audience " +
+              "you did not know. You are considering whether to give this same speech to " + 
+              "another audience</p>", transfer: "click"}],
+    ["critical", "Message", {html: "<p>Daniela in the audience says, “People didn’t stop " + 
+                      "looking at their phone on the slide about the history of the justice " + 
+                      "system.”</p>", q: "Given what your friend told you, do you think that it " +
+                      "is possible people were paying attention before the jail slide?"}],
+];
+/*
 
     // New in Ibex 0.3-beta-9. You can now add a '__SendResults__' controller in your shuffle
     // sequence to send results before the experiment has finished. This is NOT intended to allow
-    // for incremental sending of results -- you should send results exactly once per experiment.
+    // for incremental sending of results -- you should send results exactly once per experiment.,
     // However, it does permit additional messages to be displayed to participants once the
     // experiment itself is over. If you are manually inserting a '__SendResults__' controller into
     // the shuffle sequence, you must set the 'manualSendResults' configuration variable to 'true', since
