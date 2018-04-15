@@ -1,4 +1,4 @@
-var shuffleSequence = seq("intro", reshuffle("stop"_);
+var shuffleSequence = seq("intro", rshuffle("stop");
 
 var defaults = [
     "Question", {
