@@ -1,4 +1,4 @@
-BobBobvar shuffleSequence = seq("intro", sepWith("sep", rshuffle("negstop")));
+shuffleSequence = seq("intro", sepWith("sep", rshuffle("negstop", "stop")));
 
 var defaults = [
     "Question", {
