@@ -74,7 +74,7 @@ var negItems = [
   "“People didn't stop being motivated on the slide with the retention rates.”",
   "“People didn't stop engaging with you on the slide with the big numbers.”",
   "“People didn't stop nodding on the slide showcasing different stories about people affected.”",
-  "“People didn't stop asking good questions on the middle of the presentation.”"
+  "“People didn't stop asking good questions on the middle of the presentation.”",
   "“People didn't stop clapping on the slide encouraging people to call their senators.”"
 ];
                               
@@ -165,28 +165,20 @@ var items = [
               "MQuestion", questionGen("<p>Michaela says, " + negItems[9] +"</p>", 3),
               "MQuestion", questionGen("<p>Michaela says, " + negItems[9] +"</p>", 4),
               "MQuestion", questionGen("<p>Michaela says, " + negItems[9] +"</p>", 5)],
-    ["negstop", "MQuestion", {html: "<p>Michaela says, " +  negItems[10] +"</p>", q: "Given what " + 
+    ["negstop", "MQuestion", {html: "<p>Dylan says, " +  negItems[10] +"</p>", q: "Given what " + 
               "your friend told you, do you think it's possible people were asking good questions before the slide?"}
-              "MQuestion", questionGen("<p>Michaela says, " + negItems[10] +"</p>", 0),
-              "MQuestion", questionGen("<p>Michaela says, " + negItems[10] +"</p>", 1),
-              "MQuestion", questionGen("<p>Michaela says, " + negItems[10] +"</p>", 2),
-              "MQuestion", questionGen("<p>Michaela says, " + negItems[10] +"</p>", 3),
-              "MQuestion", questionGen("<p>Michaela says, " + negItems[10] +"</p>", 4),
-              "MQuestion", questionGen("<p>Michaela says, " + negItems[10] +"</p>", 5)],
-    ["negstop", "MQuestion", {html: "<p>Michaela says, " +  negItems[10] +"</p>", q: "Given what " + 
+              "MQuestion", questionGen("<p>Dylan says, " + negItems[10] +"</p>", 0),
+              "MQuestion", questionGen("<p>Dylan says, " + negItems[10] +"</p>", 1),
+              "MQuestion", questionGen("<p>Dylan says, " + negItems[10] +"</p>", 2),
+              "MQuestion", questionGen("<p>Dylan says, " + negItems[10] +"</p>", 3),
+              "MQuestion", questionGen("<p>Dylan says, " + negItems[10] +"</p>", 4),
+              "MQuestion", questionGen("<p>Dylan says, " + negItems[10] +"</p>", 5)],
+    ["negstop", "MQuestion", {html: "<p>Rachel says, " +  negItems[11] +"</p>", q: "Given what " + 
               "your friend told you, do you think it's possible people were clapping before the slide?"}
-              "MQuestion", questionGen("<p>Michaela says, " + negItems[10] +"</p>", 0),
-              "MQuestion", questionGen("<p>Michaela says, " + negItems[10] +"</p>", 1),
-              "MQuestion", questionGen("<p>Michaela says, " + negItems[10] +"</p>", 2),
-              "MQuestion", questionGen("<p>Michaela says, " + negItems[10] +"</p>", 3),
-              "MQuestion", questionGen("<p>Michaela says, " + negItems[10] +"</p>", 4),
-              "MQuestion", questionGen("<p>Michaela says, " + negItems[10] +"</p>", 5)],
-
-    // ["stop", "MQuestion", {html: "<p>Dylan says, “People didn't stop asking good questions on " +
-    //           "the middle of the presentation.”</p>", q: "Given what your Dylan told you, do " + 
-    //           "you think it's possible people were asking good questions before the middle " + 
-    //           "of the presentation?"}],
-    // ["stop", "MQuestion", {html: "<p>Rachel says, “People didn't stop clapping on the slide " +
-    //           "encouraging people to call their senators.”</p>", q: "Given what your Rachel " +
-    //           "told you, do you think it's possible people were clapping before the slide?"}]
+              "MQuestion", questionGen("<p>Rachel says, " + negItems[11] +"</p>", 0),
+              "MQuestion", questionGen("<p>Rachel says, " + negItems[11] +"</p>", 1),
+              "MQuestion", questionGen("<p>Rachel says, " + negItems[11] +"</p>", 2),
+              "MQuestion", questionGen("<p>Rachel says, " + negItems[11] +"</p>", 3),
+              "MQuestion", questionGen("<p>Rachel says, " + negItems[11] +"</p>", 4),
+              "MQuestion", questionGen("<p>Rachel says, " + negItems[11] +"</p>", 5)],
 ];
