@@ -1,8 +1,9 @@
-var shuffleSequence = seq("intro", rshuffle("stop"));
+var shuffleSequence = seq("intro", rshuffle("negstop"));
 
 var defaults = [
     "Question", {
-        as: ["Yes", "No"]
+        as: ["Yes", "No"],
+        presentAsScale: true
     },
     "Message", {
         transfer: "keypress"
@@ -21,54 +22,171 @@ define_ibex_controller({
                     "Message", this.options,
                     "Question", this.options,
                 ]
-                    });
-                    }
-                    },
-                    properties: { }
-                    });
+            });
+        }
+    },
+    properties: { }
+});
 
+var scaleSeven = ["1", "2", "3", "4", "5", "6", "7"];                               
+
+function questionGen(text, num) {
+    if (num == 0) 
+      return {html: text, q: "Do you think your friends feedback was",
+              leftComment: "Primarily Negative", 
+              rightComment: "Primarily Positive", 
+              as: scaleSeven};
+    else if (num == 1)
+        return {html: text, q: "Rate the speaker on the following:", 
+                leftComment: "Uneducated", 
+                rightComment: "Educated", 
+                as: scaleSeven};
+    else if (num == 2)
+        return {html: text, q: "Rate the speaker on the following:", 
+                leftComment: "Rude", 
+                rightComment: "Polite",
+                as: scaleSeven};
+    else if (num == 3)
+        return {html: text, q: "Rate the speaker on the following:", 
+                leftComment: "Stupid", 
+                rightComment: "Smart",
+                as: scaleSeven};   
+    else if (num == 4)
+        return {html: text, q: "Rate the speaker on the following:", 
+                leftComment: "Formal", 
+                rightComment: "Casual", 
+                as: scaleSeven};
+    else if (num == 5)
+        return {html: text, q: "Rate the speaker on the following:", 
+                leftComment: "Unpretentious", 
+                rightComment: "Pretentious",
+                as: scaleSeven};           
+}
+
+var negItems = [
+  "“People didn't stop looking at their phone on the slide about the history of the justice system.”",
+  "“People didn't stop yawning on the slide about immigrant narratives.”",
+  "“People didn't stop talking over you on the beginning slide.”",
+  "”People didn't stop falling asleep on the slide about mental health.”",
+  "“People didn't stop walking out on the middle of the presentation.”",
+  "“People didn't stop smirking on the slide with your call-to-action.”",
+  "“People didn't stop paying attention on the slide with the information about non-profit organizations.”",
+  "“People didn't stop being motivated on the slide with the retention rates.”",
+  "“People didn't stop engaging with you on the slide with the big numbers.”",
+  "“People didn't stop nodding on the slide showcasing different stories about people affected.”",
+  "“People didn't stop asking good questions on the middle of the presentation.”"
+  "“People didn't stop clapping on the slide encouraging people to call their senators.”"
+];
+                              
 var items = [
     ["intro", "Message", {html: "<p>Imagine you gave a speech at a small political rally " +
               "with a presentation about incarceration. There were people in the audience " +
               "you did not know. You are considering whether to give this same speech to " + 
               "another audience</p>", transfer: "click"}],
-    ["stop", "MQuestion", {html: "<p>Daniela says, “People didn't stop looking at their phone " +
-              "on the slide about the history of the justice system.”</p>", q: "Given what " +
-              "your Daniela told you, do you think it's possible people were paying " +
-              "attention before the slide?"}],
-    ["stop", "MQuestion", {html: "<p>Tamara says, “People didn't stop yawning on the slide about " +
-              "immigrant narratives.”</p>", q: "Given what your Tamara told you, do " +
-              "you think it's possible that people were yawning before the slide?"}],
-    ["stop", "MQuestion", {html: "<p>Ben says, “People didn't stop talking over you on " +
-              "the beginning slide.”</p>", q: "Given what your Ben told you, do you think that it " +
-              "is possible people were talking over you before the slide?"}],
-    ["stop", "MQuestion", {html: "<p>Zoe says, “People didn't stop falling asleep " +
-              "on the slide about mental health.”</p>", q: "Given what your Zoe told you, " +
-              "do you think it's possible people were falling asleep before the slide?"}],
-    ["stop", "MQuestion", {html: "<p>Joe says, “People didn't stop walking out on the middle " + 
-              "of the presentation.</p>", q: "Given what your Joe told you, do you think that it " +
-              "is possible people were walking out before the middle of the presentation?"}],
-    ["stop", "MQuestion", {html: "<p>Katherine says, “People didn't stop smirking on the slide " +
-              "with your call-to-action. ”</p>", q: "Given what your Katherine told you, do you think it's " +
-              "possible people smirking before the slide?"}],
-    ["stop", "MQuestion", {html: "<p>Mary says, “People didn't stop paying attention on the slide " +
-              "with the information about non-profit organizations.”</p>", q: "Given what your Mary told you, " +
-              "do you think it's possible people were paying attention before the slide?"}],   
-    ["stop", "MQuestion", {html: "<p>Brianna says, “People didn't stop being motivated on the " +
-              "slide with the retention rates.”</p>", q: "Given what your Brianna told you, " +
-              "do you think it's possible people were motivated before the slide?"}], 
-    ["stop", "MQuestion", {html: "<p>Elise says, “People didn't stop engaging with you on " +
-              "the slide with the big numbers.”</p>", q: "Given what your Elise told you, " +
-              "do you think it's possible people were engaging with you before the slide?"}],
-    ["stop", "MQuestion", {html: "<p>Michaela says, “People didn't stop nodding on the slide " + 
-              "showcasing different stories about people affected.”</p>", q: "Given what " + 
-              "your Michaela told you, do you think it's possible people were paying nodding " + 
-              "before the slide?"}],
-    ["stop", "MQuestion", {html: "<p>Dylan says, “People didn't stop asking good questions on " +
-              "the middle of the presentation.”</p>", q: "Given what your Dylan told you, do " + 
-              "you think it's possible people were asking good questions before the middle " + 
-              "of the presentation?"}],
-    ["stop", "MQuestion", {html: "<p>Rachel says, “People didn't stop clapping on the slide " +
-              "encouraging people to call their senators.”</p>", q: "Given what your Rachel " +
-              "told you, do you think it's possible people were clapping before the slide?"}]
+    ["negstop", "MQuestion", {html: "<p>Daniela says, " + negItems[0] +"</p>", q: "Given what " +
+             "your friend told you, do you think it's possible people were paying " +
+              "attention before the slide?" },
+              "MQuestion", questionGen("<p>Daniela says, " + negItems[0] +"</p>", 0),
+              "MQuestion", questionGen("<p>Daniela says, " + negItems[0] +"</p>", 1),
+              "MQuestion", questionGen("<p>Daniela says, " + negItems[0] +"</p>", 2),
+              "MQuestion", questionGen("<p>Daniela says, " + negItems[0] +"</p>", 3),
+              "MQuestion", questionGen("<p>Daniela says, " + negItems[0] +"</p>", 4),
+              "MQuestion", questionGen("<p>Daniela says, " + negItems[0] +"</p>", 5)],
+    ["negstop", "MQuestion", {html: "<p>Tamara says, " + negItems[1] + "</p>", q: "Given what " +
+              "your friend told you, do you think it's possible that people were yawning before the slide?"},
+              "MQuestion", questionGen("<p>Tamara says, " + negItems[1] +"</p>", 0),
+              "MQuestion", questionGen("<p>Tamara says, " + negItems[1] +"</p>", 1),
+              "MQuestion", questionGen("<p>Tamara says, " + negItems[1] +"</p>", 2),
+              "MQuestion", questionGen("<p>Tamara says, " + negItems[1] +"</p>", 3),
+              "MQuestion", questionGen("<p>Tamara says, " + negItems[1] +"</p>", 4),
+              "MQuestion", questionGen("<p>Tamara says, " + negItems[1] +"</p>", 5)],
+    ["negstop", "MQuestion", {html: "<p>Ben says, "+ negItems[2] +"</p>", q: "Given what " + 
+              "your friend told you, do you think that it's possible people were talking " + 
+              "over you before the beginning?"},
+              "MQuestion", questionGen("<p>Ben says, " + negItems[2] +"</p>", 0),
+              "MQuestion", questionGen("<p>Ben says, " + negItems[2] +"</p>", 1),
+              "MQuestion", questionGen("<p>Ben says, " + negItems[2] +"</p>", 2),
+              "MQuestion", questionGen("<p>Ben says, " + negItems[2] +"</p>", 3),
+              "MQuestion", questionGen("<p>Ben says, " + negItems[2] +"</p>", 4),
+              "MQuestion", questionGen("<p>Ben says, " + negItems[2] +"</p>", 5)],
+    ["negstop", "MQuestion", {html: "<p>Zoe says, " +  negItems[3] +"</p>", q: "Given what " + 
+              "your friend told you, do you think it's possible people were falling asleep before the slide?"}
+              "MQuestion", questionGen("<p>Zoe says, " + negItems[3] +"</p>", 0),
+              "MQuestion", questionGen("<p>Zoe says, " + negItems[3] +"</p>", 1),
+              "MQuestion", questionGen("<p>Zoe says, " + negItems[3] +"</p>", 2),
+              "MQuestion", questionGen("<p>Zoe says, " + negItems[3] +"</p>", 3),
+              "MQuestion", questionGen("<p>Zoe says, " + negItems[3] +"</p>", 4),
+              "MQuestion", questionGen("<p>Zoe says, " + negItems[3] +"</p>", 5)],
+    ["negstop", "MQuestion", {html: "<p>Joe says, " +  negItems[4] +"</p>", q: "Given what " + 
+              "your friend told you, do you think it's possible people were walking out before the middle of the presentation?"}
+              "MQuestion", questionGen("<p>Joe says, " + negItems[4] +"</p>", 0),
+              "MQuestion", questionGen("<p>Joe says, " + negItems[4] +"</p>", 1),
+              "MQuestion", questionGen("<p>Joe says, " + negItems[4] +"</p>", 2),
+              "MQuestion", questionGen("<p>Joe says, " + negItems[4] +"</p>", 3),
+              "MQuestion", questionGen("<p>Joe says, " + negItems[4] +"</p>", 4),
+              "MQuestion", questionGen("<p>Joe says, " + negItems[4] +"</p>", 5)],
+    ["negstop", "MQuestion", {html: "<p>Katherine says, " +  negItems[5] +"</p>", q: "Given what " + 
+              "your friend told you, do you think it's possible people were smirking before the slide?"}
+              "MQuestion", questionGen("<p>Katherine says, " + negItems[5] +"</p>", 0),
+              "MQuestion", questionGen("<p>Katherine says, " + negItems[5] +"</p>", 1),
+              "MQuestion", questionGen("<p>Katherine says, " + negItems[5] +"</p>", 2),
+              "MQuestion", questionGen("<p>Katherine says, " + negItems[5] +"</p>", 3),
+              "MQuestion", questionGen("<p>Katherine says, " + negItems[5] +"</p>", 4),
+              "MQuestion", questionGen("<p>Katherine says, " + negItems[5] +"</p>", 5)],
+    ["negstop", "MQuestion", {html: "<p>Mary says, " +  negItems[6] +"</p>", q: "Given what " + 
+              "your friend told you, do you think it's possible people were paying attention before the slide?"}
+              "MQuestion", questionGen("<p>Mary says, " + negItems[6] +"</p>", 0),
+              "MQuestion", questionGen("<p>Mary says, " + negItems[6] +"</p>", 1),
+              "MQuestion", questionGen("<p>Mary says, " + negItems[6] +"</p>", 2),
+              "MQuestion", questionGen("<p>Mary says, " + negItems[6] +"</p>", 3),
+              "MQuestion", questionGen("<p>Mary says, " + negItems[6] +"</p>", 4),
+              "MQuestion", questionGen("<p>Mary says, " + negItems[6] +"</p>", 5)],
+    ["negstop", "MQuestion", {html: "<p>Brianna says, " +  negItems[7] +"</p>", q: "Given what " + 
+              "your friend told you, do you think it's possible people were motivated before the slide?"}
+              "MQuestion", questionGen("<p>Brianna says, " + negItems[7] +"</p>", 0),
+              "MQuestion", questionGen("<p>Brianna says, " + negItems[7] +"</p>", 1),
+              "MQuestion", questionGen("<p>Brianna says, " + negItems[7] +"</p>", 2),
+              "MQuestion", questionGen("<p>Brianna says, " + negItems[7] +"</p>", 3),
+              "MQuestion", questionGen("<p>Brianna says, " + negItems[7] +"</p>", 4),
+              "MQuestion", questionGen("<p>Brianna says, " + negItems[7] +"</p>", 5)],
+    ["negstop", "MQuestion", {html: "<p>Elise says, " +  negItems[8] +"</p>", q: "Given what " + 
+              "your friend told you, do you think it's possible people were engaging with you before the slide?"}
+              "MQuestion", questionGen("<p>Elise says, " + negItems[8] +"</p>", 0),
+              "MQuestion", questionGen("<p>Elise says, " + negItems[8] +"</p>", 1),
+              "MQuestion", questionGen("<p>Elise says, " + negItems[8] +"</p>", 2),
+              "MQuestion", questionGen("<p>Elise says, " + negItems[8] +"</p>", 3),
+              "MQuestion", questionGen("<p>Elise says, " + negItems[8] +"</p>", 4),
+              "MQuestion", questionGen("<p>Elise says, " + negItems[8] +"</p>", 5)],
+    ["negstop", "MQuestion", {html: "<p>Michaela says, " +  negItems[9] +"</p>", q: "Given what " + 
+              "your friend told you, do you think it's possible people were nodding before the slide?"}
+              "MQuestion", questionGen("<p>Michaela says, " + negItems[9] +"</p>", 0),
+              "MQuestion", questionGen("<p>Michaela says, " + negItems[9] +"</p>", 1),
+              "MQuestion", questionGen("<p>Michaela says, " + negItems[9] +"</p>", 2),
+              "MQuestion", questionGen("<p>Michaela says, " + negItems[9] +"</p>", 3),
+              "MQuestion", questionGen("<p>Michaela says, " + negItems[9] +"</p>", 4),
+              "MQuestion", questionGen("<p>Michaela says, " + negItems[9] +"</p>", 5)],
+    ["negstop", "MQuestion", {html: "<p>Michaela says, " +  negItems[10] +"</p>", q: "Given what " + 
+              "your friend told you, do you think it's possible people were asking good questions before the slide?"}
+              "MQuestion", questionGen("<p>Michaela says, " + negItems[10] +"</p>", 0),
+              "MQuestion", questionGen("<p>Michaela says, " + negItems[10] +"</p>", 1),
+              "MQuestion", questionGen("<p>Michaela says, " + negItems[10] +"</p>", 2),
+              "MQuestion", questionGen("<p>Michaela says, " + negItems[10] +"</p>", 3),
+              "MQuestion", questionGen("<p>Michaela says, " + negItems[10] +"</p>", 4),
+              "MQuestion", questionGen("<p>Michaela says, " + negItems[10] +"</p>", 5)],
+    ["negstop", "MQuestion", {html: "<p>Michaela says, " +  negItems[10] +"</p>", q: "Given what " + 
+              "your friend told you, do you think it's possible people were clapping before the slide?"}
+              "MQuestion", questionGen("<p>Michaela says, " + negItems[10] +"</p>", 0),
+              "MQuestion", questionGen("<p>Michaela says, " + negItems[10] +"</p>", 1),
+              "MQuestion", questionGen("<p>Michaela says, " + negItems[10] +"</p>", 2),
+              "MQuestion", questionGen("<p>Michaela says, " + negItems[10] +"</p>", 3),
+              "MQuestion", questionGen("<p>Michaela says, " + negItems[10] +"</p>", 4),
+              "MQuestion", questionGen("<p>Michaela says, " + negItems[10] +"</p>", 5)],
+
+    // ["stop", "MQuestion", {html: "<p>Dylan says, “People didn't stop asking good questions on " +
+    //           "the middle of the presentation.”</p>", q: "Given what your Dylan told you, do " + 
+    //           "you think it's possible people were asking good questions before the middle " + 
+    //           "of the presentation?"}],
+    // ["stop", "MQuestion", {html: "<p>Rachel says, “People didn't stop clapping on the slide " +
+    //           "encouraging people to call their senators.”</p>", q: "Given what your Rachel " +
+    //           "told you, do you think it's possible people were clapping before the slide?"}]
 ];
