@@ -128,7 +128,7 @@ var fillerItems = [
 var inst = "<p>Imagine you gave a speech at a small political rally " +
 "with a presentation about incarceration. There were people in the audience " +
 "you did not know. You are considering whether to give this same speech to " +
-"another audience. A fiend comes up to you.</p>";
+"another audience. A friend comes up to you.</p>";
 
 var items = [
     ["intro", "Message", {html: inst, transfer: "click"}],
