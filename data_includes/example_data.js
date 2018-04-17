@@ -330,7 +330,7 @@ var items = [
               "MQuestion", questionGen(inst + "<p>Bob says, " + notNegItems[11] +"</p>", 4),
               "MQuestion", questionGen(inst + "<p>Bob says, " + notNegItems[11] +"</p>", 5)],
     ["ftsome", "MQuestion", {html: inst + "<p>Anna says, " +  someItems[0] +"</p>", q: "Given what " + 
-              "your friend told you, do you think it's possible people were clapping before the slide?"},
+              "your friend told you, do you think it's possible everybody hated your speech?"},
               "MQuestion", questionGen(inst + "<p>Anna says, " + someItems[0] +"</p>", 0),
               "MQuestion", questionGen(inst + "<p>Anna says, " + someItems[0] +"</p>", 1),
               "MQuestion", questionGen(inst + "<p>Anna says, " + someItems[0] +"</p>", 2),
@@ -338,7 +338,7 @@ var items = [
               "MQuestion", questionGen(inst + "<p>Anna says, " + someItems[0] +"</p>", 4),
               "MQuestion", questionGen(inst + "<p>Anna says, " + someItems[0] +"</p>", 5)],
     ["ftsome", "MQuestion", {html: inst + "<p>Jessica says, " +  someItems[1] +"</p>", q: "Given what " + 
-              "your friend told you, do you think it's possible people were clapping before the slide?"},
+              "your friend told you, do you think it's possible everybody disliked your speech?"},
               "MQuestion", questionGen(inst + "<p>Jessica says, " + someItems[1] +"</p>", 0),
               "MQuestion", questionGen(inst + "<p>Jessica says, " + someItems[1] +"</p>", 1),
               "MQuestion", questionGen(inst + "<p>Jessica says, " + someItems[1] +"</p>", 2),
@@ -346,7 +346,7 @@ var items = [
               "MQuestion", questionGen(inst + "<p>Jessica says, " + someItems[1] +"</p>", 4),
               "MQuestion", questionGen(inst + "<p>Jessica says, " + someItems[1] +"</p>", 5)],
     ["fbsome", "MQuestion", {html: inst + "<p>Tom says, " +  someItems[2] +"</p>", q: "Given what " + 
-              "your friend told you, do you think it's possible people were clapping before the slide?"},
+              "your friend told you, do you think it's possible everybody loved your speech?"},
               "MQuestion", questionGen(inst + "<p>Tom says, " + someItems[2] +"</p>", 0),
               "MQuestion", questionGen(inst + "<p>Tom says, " + someItems[2] +"</p>", 1),
               "MQuestion", questionGen(inst + "<p>Tom says, " + someItems[2] +"</p>", 2),
@@ -354,7 +354,7 @@ var items = [
               "MQuestion", questionGen(inst + "<p>Tom says, " + someItems[2] +"</p>", 4),
               "MQuestion", questionGen(inst + "<p>Tom says, " + someItems[2] +"</p>", 5)],
     ["fbsome", "MQuestion", {html: inst + "<p>Jack says, " +  someItems[3] +"</p>", q: "Given what " + 
-              "your friend told you, do you think it's possible people were clapping before the slide?"},
+              "your friend told you, do you think it's possible everybody liked your speech?"},
               "MQuestion", questionGen(inst + "<p>Jack says, " + someItems[3] +"</p>", 0),
               "MQuestion", questionGen(inst + "<p>Jack says, " + someItems[3] +"</p>", 1),
               "MQuestion", questionGen(inst + "<p>Jack says, " + someItems[3] +"</p>", 2),
@@ -362,7 +362,7 @@ var items = [
               "MQuestion", questionGen(inst + "<p>Jack says, " + someItems[3] +"</p>", 4),
               "MQuestion", questionGen(inst + "<p>Jack says, " + someItems[3] +"</p>", 5)],
     ["filler", "MQuestion", {html: inst + "<p>Izzy says, " +  fillerItems[0] +"</p>", q: "Given what " +
-              "your friend told you, do you think it's possible people were walking out before the middle of the presentation?"},
+              "your friend told you, do you think it's possible people were eating donuts before your presentation?"},
               "MQuestion", questionGen(inst + "<p>Izzy says, " + fillerItems[0] +"</p>", 0),
               "MQuestion", questionGen(inst + "<p>Izzy says, " + fillerItems[0] +"</p>", 1),
               "MQuestion", questionGen(inst + "<p>Izzy says, " + fillerItems[0] +"</p>", 2),
@@ -370,7 +370,7 @@ var items = [
               "MQuestion", questionGen(inst + "<p>Izzy says, " + fillerItems[0] +"</p>", 4),
               "MQuestion", questionGen(inst + "<p>Izzy says, " + fillerItems[0] +"</p>", 5)],              
     ["filler", "MQuestion", {html: inst + "<p>Elizabeth says, " +  fillerItems[1] +"</p>", q: "Given what " +
-              "your friend told you, do you think it's possible people were walking out before the middle of the presentation?"},
+              "your friend told you, do you think it's possible people were eating veggies before your presentation?"},
               "MQuestion", questionGen(inst + "<p>Elizabeth says, " + fillerItems[1] +"</p>", 0),
               "MQuestion", questionGen(inst + "<p>Elizabeth says, " + fillerItems[1] +"</p>", 1),
               "MQuestion", questionGen(inst + "<p>Elizabeth says, " + fillerItems[1] +"</p>", 2),
@@ -378,7 +378,7 @@ var items = [
               "MQuestion", questionGen(inst + "<p>Elizabeth says, " + fillerItems[1] +"</p>", 4),
               "MQuestion", questionGen(inst + "<p>Elizabeth says, " + fillerItems[1] +"</p>", 5)],          
     ["filler", "MQuestion", {html: inst + "<p>Liz says, " +  fillerItems[2] +"</p>", q: "Given what " +
-              "your friend told you, do you think it's possible people were walking out before the middle of the presentation?"},
+              "your friend told you, do you think it's possible people were eating the food during your presentation?"},
               "MQuestion", questionGen(inst + "<p>Liz says, " + fillerItems[2] +"</p>", 0),
               "MQuestion", questionGen(inst + "<p>Liz says, " + fillerItems[2] +"</p>", 1),
               "MQuestion", questionGen(inst + "<p>Liz says, " + fillerItems[2] +"</p>", 2),
@@ -386,7 +386,7 @@ var items = [
               "MQuestion", questionGen(inst + "<p>Liz says, " + fillerItems[2] +"</p>", 4),
               "MQuestion", questionGen(inst + "<p>Liz says, " + fillerItems[2] +"</p>", 5)],
     ["filler", "MQuestion", {html: inst + "<p>Hannah says, " +  fillerItems[3] +"</p>", q: "Given what " +
-              "your friend told you, do you think it's possible people were walking out before the middle of the presentation?"},
+              "your friend told you, do you think it's possible people were too cold in the beginning of the rally?"},
               "MQuestion", questionGen(inst + "<p>Hannah says, " + fillerItems[3] +"</p>", 0),
               "MQuestion", questionGen(inst + "<p>Hannah says, " + fillerItems[3] +"</p>", 1),
               "MQuestion", questionGen(inst + "<p>Hannah says, " + fillerItems[3] +"</p>", 2),
@@ -394,7 +394,7 @@ var items = [
               "MQuestion", questionGen(inst + "<p>Hannah says, " + fillerItems[3] +"</p>", 4),
               "MQuestion", questionGen(inst + "<p>Hannah says, " + fillerItems[3] +"</p>", 5)],          
     ["filler", "MQuestion", {html: inst + "<p>Sam says, " +  fillerItems[4] +"</p>", q: "Given what " +
-              "your friend told you, do you think it's possible people were walking out before the middle of the presentation?"},
+              "your friend told you, do you think it's possible people were hanging out before the event?"},
               "MQuestion", questionGen(inst + "<p>Sam says, " + fillerItems[4] +"</p>", 0),
               "MQuestion", questionGen(inst + "<p>Sam says, " + fillerItems[4] +"</p>", 1),
               "MQuestion", questionGen(inst + "<p>Sam says, " + fillerItems[4] +"</p>", 2),
@@ -402,7 +402,7 @@ var items = [
               "MQuestion", questionGen(inst + "<p>Sam says, " + fillerItems[4] +"</p>", 4),
               "MQuestion", questionGen(inst + "<p>Sam says, " + fillerItems[4] +"</p>", 5)],
     ["filler", "MQuestion", {html: inst + "<p>Monica says, " +  fillerItems[5] +"</p>", q: "Given what " +
-              "your friend told you, do you think it's possible people were smirking before the slide?"},
+              "your friend told you, do you think it's possible people stayed for a while after the presentation?"},
               "MQuestion", questionGen(inst + "<p>Monica says, " + fillerItems[5] +"</p>", 0),
               "MQuestion", questionGen(inst + "<p>Monica says, " + fillerItems[5] +"</p>", 1),
               "MQuestion", questionGen(inst + "<p>Monica says, " + fillerItems[5] +"</p>", 2),
@@ -410,7 +410,7 @@ var items = [
               "MQuestion", questionGen(inst + "<p>Monica says, " + fillerItems[5] +"</p>", 4),
               "MQuestion", questionGen(inst + "<p>Monica says, " + fillerItems[5] +"</p>", 5)],
     ["filler", "MQuestion", {html: inst + "<p>Aaron says, " +  fillerItems[6] +"</p>", q: "Given what " +
-              "your friend told you, do you think it's possible people were paying attention before the slide?"},
+              "your friend told you, do you think it's possible people were late to the event?"},
               "MQuestion", questionGen(inst + "<p>Aaron says, " + fillerItems[6] +"</p>", 0),
               "MQuestion", questionGen(inst + "<p>Aaron says, " + fillerItems[6] +"</p>", 1),
               "MQuestion", questionGen(inst + "<p>Aaron says, " + fillerItems[6] +"</p>", 2),
@@ -418,7 +418,7 @@ var items = [
               "MQuestion", questionGen(inst + "<p>Aaron says, " + fillerItems[6] +"</p>", 4),
               "MQuestion", questionGen(inst + "<p>Aaron says, " + fillerItems[6] +"</p>", 5)],
     ["filler", "MQuestion", {html: inst + "<p>Karen says, " +  fillerItems[7] +"</p>", q: "Given what " +
-              "your friend told you, do you think it's possible people were motivated before the slide?"},
+              "your friend told you, do you think it's possible people were cold throughout the event?"},
               "MQuestion", questionGen(inst + "<p>Karen says, " + fillerItems[7] +"</p>", 0),
               "MQuestion", questionGen(inst + "<p>Karen says, " + fillerItems[7] +"</p>", 1),
               "MQuestion", questionGen(inst + "<p>Karen says, " + fillerItems[7] +"</p>", 2),
@@ -426,7 +426,7 @@ var items = [
               "MQuestion", questionGen(inst + "<p>Karen says, " + fillerItems[7] +"</p>", 4),
               "MQuestion", questionGen(inst + "<p>Karen says, " + fillerItems[7] +"</p>", 5)],
     ["filler", "MQuestion", {html: inst + "<p>Jane says, " +  fillerItems[8] +"</p>", q: "Given what " +
-              "your friend told you, do you think it's possible people were engaging with you before the slide?"},
+              "your friend told you, do you think it's possible people disliked the food?"},
               "MQuestion", questionGen(inst + "<p>Jane says, " + fillerItems[8] +"</p>", 0),
               "MQuestion", questionGen(inst + "<p>Jane says, " + fillerItems[8] +"</p>", 1),
               "MQuestion", questionGen(inst + "<p>Jane says, " + fillerItems[8] +"</p>", 2),
@@ -434,7 +434,7 @@ var items = [
               "MQuestion", questionGen(inst + "<p>Jane says, " + fillerItems[8] +"</p>", 4),
               "MQuestion", questionGen(inst + "<p>Jane says, " + fillerItems[8] +"</p>", 5)],
     ["filler", "MQuestion", {html: inst + "<p>Catherine says, " +  fillerItems[9] +"</p>", q: "Given what " +
-              "your friend told you, do you think it's possible people were nodding before the slide?"},
+              "your friend told you, do you think it's possible people were talking to each other before the presentation?"},
               "MQuestion", questionGen(inst + "<p>Catherine says, " + fillerItems[9] +"</p>", 0),
               "MQuestion", questionGen(inst + "<p>Catherine says, " + fillerItems[9] +"</p>", 1),
               "MQuestion", questionGen(inst + "<p>Catherine says, " + fillerItems[9] +"</p>", 2),
@@ -442,7 +442,7 @@ var items = [
               "MQuestion", questionGen(inst + "<p>Catherine says, " + fillerItems[9] +"</p>", 4),
               "MQuestion", questionGen(inst + "<p>Catherine says, " + fillerItems[9] +"</p>", 5)],
     ["filler", "MQuestion", {html: inst + "<p>Emily says, " +  fillerItems[10] +"</p>", q: "Given what " +
-              "your friend told you, do you think it's possible people were asking good questions before the slide?"},
+              "your friend told you, do you think it's possible people didn't go to the march afterwards?"},
               "MQuestion", questionGen(inst + "<p>Emily says, " + fillerItems[10] +"</p>", 0),
               "MQuestion", questionGen(inst + "<p>Emily says, " + fillerItems[10] +"</p>", 1),
               "MQuestion", questionGen(inst + "<p>Emily says, " + fillerItems[10] +"</p>", 2),
@@ -450,7 +450,7 @@ var items = [
               "MQuestion", questionGen(inst + "<p>Emily says, " + fillerItems[10] +"</p>", 4),
               "MQuestion", questionGen(inst + "<p>Emily says, " + fillerItems[10] +"</p>", 5)],
     ["filler", "MQuestion", {html: inst + "<p>Chelsea says, " +  fillerItems[11] +"</p>", q: "Given what " + 
-              "your friend told you, do you think it's possible people were clapping before the slide?"},
+              "your friend told you, do you think it's possible people didn't car-pool to the event?"},
               "MQuestion", questionGen(inst + "<p>Chelsea says, " + fillerItems[11] +"</p>", 0),
               "MQuestion", questionGen(inst + "<p>Chelsea says, " + fillerItems[11] +"</p>", 1),
               "MQuestion", questionGen(inst + "<p>Chelsea says, " + fillerItems[11] +"</p>", 2),
@@ -458,8 +458,7 @@ var items = [
               "MQuestion", questionGen(inst + "<p>Chelsea says, " + fillerItems[11] +"</p>", 4),
               "MQuestion", questionGen(inst + "<p>Chelsea says, " + fillerItems[11] +"</p>", 5)],
     ["filler", "MQuestion", {html: inst + "<p>Allison says, "+ notNegItems[12] +"</p>", q: "Given what " +
-              "your friend told you, do you think that it's possible people were talking " +
-              "over you before the beginning?"},
+              "your friend told you, do you think that it's possible people didn't know each other?"},
               "MQuestion", questionGen(inst + "<p>Allison says, " + notNegItems[12] +"</p>", 0),
               "MQuestion", questionGen(inst + "<p>Allison says, " + notNegItems[12] +"</p>", 1),
               "MQuestion", questionGen(inst + "<p>Allison says, " + notNegItems[12] +"</p>", 2),
@@ -467,7 +466,7 @@ var items = [
               "MQuestion", questionGen(inst + "<p>Allison says, " + notNegItems[12] +"</p>", 4),
               "MQuestion", questionGen(inst + "<p>Allison says, " + notNegItems[12] +"</p>", 5)],
     ["filler", "MQuestion", {html: inst + "<p>Zack says, " +  notNegItems[13] +"</p>", q: "Given what " +
-              "your friend told you, do you think it's possible people were falling asleep before the slide?"},
+              "your friend told you, do you think it's possible the food was bad?"},
               "MQuestion", questionGen(inst + "<p>Zack says, " + notNegItems[13] +"</p>", 0),
               "MQuestion", questionGen(inst + "<p>Zack says, " + fillerItems[13] +"</p>", 1),
               "MQuestion", questionGen(inst + "<p>Zack says, " + fillerItems[13] +"</p>", 2),
@@ -475,7 +474,7 @@ var items = [
               "MQuestion", questionGen(inst + "<p>Zack says, " + fillerItems[13] +"</p>", 4),
               "MQuestion", questionGen(inst + "<p>Zack says, " + fillerItems[13] +"</p>", 5)],
     ["filler", "MQuestion", {html: inst + "<p>Elle says, " +  fillerItems[14] +"</p>", q: "Given what " +
-              "your friend told you, do you think it's possible people were walking out before the middle of the presentation?"},
+              "your friend told you, do you think it's possible people didn't show up for the rally?"},
               "MQuestion", questionGen(inst + "<p>Elle says, " + fillerItems[14] +"</p>", 0),
               "MQuestion", questionGen(inst + "<p>Elle says, " + fillerItems[14] +"</p>", 1),
               "MQuestion", questionGen(inst + "<p>Elle says, " + fillerItems[14] +"</p>", 2),
@@ -483,7 +482,7 @@ var items = [
               "MQuestion", questionGen(inst + "<p>Elle says, " + fillerItems[14] +"</p>", 4),
               "MQuestion", questionGen(inst + "<p>Elle says, " + fillerItems[14] +"</p>", 5)],
     ["filler", "MQuestion", {html: inst + "<p>Katherine says, " +  fillerItems[15] +"</p>", q: "Given what " +
-              "your friend told you, do you think it's possible people were smirking before the slide?"},
+              "your friend told you, do you think it's possible the venue was too small?"},
               "MQuestion", questionGen(inst + "<p>Katherine says, " + fillerItems[15] +"</p>", 0),
               "MQuestion", questionGen(inst + "<p>Katherine says, " + fillerItems[15] +"</p>", 1),
               "MQuestion", questionGen(inst + "<p>Katherine says, " + fillerItems[15] +"</p>", 2),
@@ -491,7 +490,7 @@ var items = [
               "MQuestion", questionGen(inst + "<p>Katherine says, " + fillerItems[15] +"</p>", 4),
               "MQuestion", questionGen(inst + "<p>Katherine says, " + fillerItems[15] +"</p>", 5)],
     ["filler", "MQuestion", {html: inst + "<p>John says, " +  fillerItems[16] +"</p>", q: "Given what " +
-              "your friend told you, do you think it's possible people were paying attention before the slide?"},
+              "your friend told you, do you think it's possible the weather was okay?"},
               "MQuestion", questionGen(inst + "<p>John says, " + fillerItems[16] +"</p>", 0),
               "MQuestion", questionGen(inst + "<p>John says, " + fillerItems[16] +"</p>", 1),
               "MQuestion", questionGen(inst + "<p>John says, " + fillerItems[16] +"</p>", 2),
@@ -499,7 +498,7 @@ var items = [
               "MQuestion", questionGen(inst + "<p>John says, " + fillerItems[16] +"</p>", 4),
               "MQuestion", questionGen(inst + "<p>John says, " + fillerItems[16] +"</p>", 5)],
     ["filler", "MQuestion", {html: inst + "<p>Cathy says, " +  fillerItems[17] +"</p>", q: "Given what " +
-              "your friend told you, do you think it's possible people were motivated before the slide?"},
+              "your friend told you, do you think it's possible people noticed that you did well?"},
               "MQuestion", questionGen(inst + "<p>Cathy says, " + fillerItems[17] +"</p>", 0),
               "MQuestion", questionGen(inst + "<p>Cathy says, " + fillerItems[17] +"</p>", 1),
               "MQuestion", questionGen(inst + "<p>Cathy says, " + fillerItems[17] +"</p>", 2),
@@ -507,7 +506,7 @@ var items = [
               "MQuestion", questionGen(inst + "<p>Cathy says, " + fillerItems[17] +"</p>", 4),
               "MQuestion", questionGen(inst + "<p>Cathy says, " + fillerItems[17] +"</p>", 5)],
     ["filler", "MQuestion", {html: inst + "<p>Jacob says, " +  fillerItems[18] +"</p>", q: "Given what " +
-              "your friend told you, do you think it's possible people were engaging with you before the slide?"},
+              "your friend told you, do you think it's possible people noticed that you were nervous?"},
               "MQuestion", questionGen(inst + "<p>Jacob says, " + fillerItems[18] +"</p>", 0),
               "MQuestion", questionGen(inst + "<p>Jacob says, " + fillerItems[18] +"</p>", 1),
               "MQuestion", questionGen(inst + "<p>Jacob says, " + fillerItems[18] +"</p>", 2),
@@ -515,7 +514,7 @@ var items = [
               "MQuestion", questionGen(inst + "<p>Jacob says, " + fillerItems[18] +"</p>", 4),
               "MQuestion", questionGen(inst + "<p>Jacob says, " + fillerItems[18] +"</p>", 5)],
     ["filler", "MQuestion", {html: inst + "<p>Robert says, " +  fillerItems[19] +"</p>", q: "Given what " +
-              "your friend told you, do you think it's possible people were nodding before the slide?"},
+              "your friend told you, do you think it's possible people thought that your presentation was informative?"},
               "MQuestion", questionGen(inst + "<p>Robert says, " + fillerItems[19] +"</p>", 0),
               "MQuestion", questionGen(inst + "<p>Robert says, " + fillerItems[19] +"</p>", 1),
               "MQuestion", questionGen(inst + "<p>Robert says, " + fillerItems[19] +"</p>", 2),
